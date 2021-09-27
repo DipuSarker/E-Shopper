@@ -141,7 +141,7 @@ def Search(request):
     return render(request, 'search.html', context)
 
 
-@login_required(login_url="/accounts/login")
+@login_required(login_url="/accounts/login/")
 def cart_add(request, id):
     cart = Cart(request)
     product = Product.objects.get(id=id)
